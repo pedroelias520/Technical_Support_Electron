@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles.css" rel="stylesheet">  
+</head>
+
+<body>
+
+  <div class="mainframe">
+    <div class="navigation">
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon"><i class='bx bx-home-alt-2'></i></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class='bx bxs-component'></i></span>
+            <span class="title">Serviços</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class='bx bx-bar-chart-alt-2'></i></span>
+            <span class="title">Relatórios</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class='bx bxs-cog'></i></span>
+            <span class="title">Configurações </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="centralTitle">
+      <div class="headTitle">
+        <h2>Welcome</h2>
+        <h1>Pedro Elias</h1>
+      </div>
+      <div class="logo">
+        <img src="./src/imgs/saturn.png">
+        <div id="date">
+          <h3>18/06/2022 23:20</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
