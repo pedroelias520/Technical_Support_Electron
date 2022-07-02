@@ -1,7 +1,8 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
+var createOrder
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -9,7 +10,19 @@ function createWindow () {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true      
+      nodeIntegration: true,
+      contextIsolation: false,
+      
+    }
+  })
+
+  createOrder = new BrowserWindow({
+    width: 800,
+    height: 600,
+    show: false,
+    webPreferences: {      
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   })
 
@@ -39,6 +52,14 @@ app.whenReady().then(() => {
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
+})
+
+
+ipcMain.on('createOrder',()=>{
+  createOrder.loadFile('src/views/CreateOrder/createOrder.html')
+  createOrder.once('ready-to-show',()=>{
+    createOrder.show()
+  })    
 })
 
 // In this file you can include the rest of your app's specific main process

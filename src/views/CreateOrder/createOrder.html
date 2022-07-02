@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Screen</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
-    <script type="module" src="renderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="createOrder.css" media="screen">
+    <script type="module" src="createOrder.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -17,7 +17,7 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <img src="src/imgs/AlphaTech_transparent.png" alt="logo">
+                        <img src="/src/imgs/AlphaTech_transparent.png" alt="logo">
                     </span>
                     <div class="text hearder-text">
                         <span class="name">Saturno 0.1</span>
@@ -69,18 +69,23 @@
             </div>
         </nav>
         <div class="main_div"> 
-            <div class="camp">
-                <h1 class="title_header">Olá, bem vindo ao SATURN</h1>                
-            </div>
-            <div class="camp">
-                <img src="src/imgs/ISOLOGO_TRANSPARENT_BLACK.png" class="homeLogo" alt="logo_alpha">                
-            </div>
-            <div class="camp">
-                <h1 class="title_header" id="clock">Hora</h1>                
-            </div>        
-            <div class="button_row">                
-                
-            </div>
+            <div class="dateDiv">
+                <h1 class="titleName">Data de início</h1>                
+                <input type="date" class="dateChosser">
+                <h1 class="titleName">Data de Término</h1>                
+                <input type="date" class="dateChosser">
+                <h2 class="titleName"> Nome do cliente </h2>
+                <input type="text" class="clientName">
+            </div> 
+            <div class="clientsList">
+                <div class="clientPerson">
+                    <div class="clientCode">#120</div>
+                    <h4 class="clientDescription">Pedro Elias Figueredo de Sousa</h4>
+                    <h4 class="clientDescription">Positivo SLIM 4</h4>
+                    <h4 class="clientDescription">23/06/2022</h4>
+                    <div class="clientPrice">R$ 256</div>
+                </div>
+            </div>                                      
         </div>
     </div>    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

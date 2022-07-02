@@ -1,4 +1,5 @@
 
+const { ipcRenderer} = require('electron');
 const body = document.querySelector("body");
 const sidebar = body.querySelector(".sidebar");
 const toggle = body.querySelector(".toggle");
@@ -7,7 +8,6 @@ const modeSwitch = body.querySelector(".toggle-switch");
 const modeText = body.querySelector(".mode-text");
 const logOutButton = body.querySelector(".logout");
 const openOcorrency = body.querySelector(".open");
-const closeOcorrency = body.querySelector(".close");
 const clearButton = body.querySelector(".clear");
 const copyButton = body.querySelector(".confirm");
 const textAreas = document.getElementsByClassName("text_input")
@@ -30,8 +30,10 @@ toggle.addEventListener("click", ()=> {
     sidebar.classList.toggle("close");           
 })
 
-
-
+openOcorrency.addEventListener("click", ()=>{
+    console.log("Clicou em abrir ordem")
+    ipcRenderer.send('createOrder')
+})
 
 function startTime() {
     const today = new Date();
