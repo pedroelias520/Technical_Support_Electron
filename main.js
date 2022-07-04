@@ -2,7 +2,7 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-var createOrder
+var createOrder, newOrder
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -21,6 +21,16 @@ function createWindow () {
     height: 600,
     show: false,
     webPreferences: {      
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
+  })
+
+  newOrder = new BrowserWindow ({
+    width:800,
+    height: 600,
+    show: false,
+    webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     }
@@ -60,6 +70,13 @@ ipcMain.on('createOrder',()=>{
   createOrder.once('ready-to-show',()=>{
     createOrder.show()
   })    
+})
+
+ipcMain.on('newOrder', ()=> {
+  newOrder.loadFile('src/views/NewOrder/newOrder.html')
+  newOrder.once('ready-to-show',()=> {
+    newOrder.show()
+  })
 })
 
 // In this file you can include the rest of your app's specific main process

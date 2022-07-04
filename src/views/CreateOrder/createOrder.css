@@ -313,6 +313,7 @@ body.dark .switch::before {
   font-family: "Montserrat";
   color: var(--text-color);
   border: 0px;
+  width: 100%;
   grid-column: 2/5;
   border-radius: 20px;
   background-color: var(--sidebar-color);
@@ -333,7 +334,7 @@ body.dark .switch::before {
     margin: auto;
     width: 100%;
     grid-column: 1;
-    font-size: 3vh;
+    font-size: 2vw;
     background-color: var(--body-color);
     font-family: 'Montserrat_Bold';
     color: var(--primaryc-color);
@@ -351,7 +352,7 @@ body.dark .switch::before {
     margin: auto;
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2vw;
     grid-column: 6;
     border-radius: 80px;
     font-family: 'Montserrat_Bold';
@@ -373,25 +374,32 @@ body.dark .switch::before {
 .buttonsDiv {
   display: grid;
   height: 10%;
+  margin-top: 1.5vh;
   margin-left: 10px;
   margin-right: 10px; }
   .buttonsDiv #newOrder {
-    margin: 10px;
+    text-align: center;
     border: 0px;
     border-radius: 20px;
     grid-column: 2;
     height: 100%;
+    font-size: 2vw;
     background-color: var(--body-color);
     color: var(--text-color);
-    font-size: 2vh;
     transition: var(--tran-03); }
+    .buttonsDiv #newOrder i {
+      border: 1px solid purple;
+      margin: auto; }
   .buttonsDiv #newOrder:hover {
-    font-size: 2.5vh;
+    transition: var(--tran-03);
+    font-family: 'Montserrat_Bold';
+    font-size: 1.5vw;
     transition: var(--tran-03);
     background-color: var(--shador-color);
     color: var(--sidebar-color); }
   .buttonsDiv .qtdOrders {
-    margin: 10px;
+    padding-top: 10px;
+    margin: auto;
     grid-column: 1;
     height: 100%;
     font-size: 2vw;
