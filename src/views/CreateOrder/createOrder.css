@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap");
 @font-face {
   font-family: 'Montserrat';
-  src: url("/src/fonts/Montserrat-Medium.ttf"); }
+  src: url("Montserrat-Medium.ttf"); }
 
 @font-face {
   font-family: 'Montserrat_Bold';
-  src: url("/src/fonts/Montserrat-Bold.ttf"); }
+  src: url("Montserrat-Bold.ttf"); }
 
 * {
   font-family: 'Montserrat';
@@ -228,7 +228,7 @@ body.dark .switch::before {
 .main_div {
   border: 1px solid blue;
   border-radius: 30px;
-  height: 30rem;
+  height: 80%;
   background-color: var(--text-color);
   text-align: center;
   width: 70%;
@@ -287,27 +287,26 @@ body.dark .switch::before {
   transition: var(--tran-03); }
 
 .dateDiv {
-  border: 1px solid greenyellow;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
-  height: max-content;
-  margin: 30px; }
+  height: 10%;
+  margin: 10px; }
 
 .titleName {
-  border: 1px solid #fff;
   font-size: 2vw;
   color: var(--primary-color-light); }
 
 .dateChosser {
   font-family: 'Montserrat_Bold';
+  font-size: 1vw;
   text-align: center;
   border: 0px;
   width: 100%;
   border-radius: 20px;
   text-decoration: none;
   background: var(--body-color);
-  color: var(--sidebar-color); }
+  color: var(--text-color); }
 
 .clientName {
   text-align: center;
@@ -319,36 +318,88 @@ body.dark .switch::before {
   background-color: var(--sidebar-color);
   text-decoration: none; }
 
-.clientList {
-  overflow: scroll; }
-  .clientList ::-webkit-scrollbar {
-    width: 5px; }
-  .clientList ::-webkit-scrollbar-thumb {
-    background: var(--body-color);
-    border-radius: 10px; }
+.clientsList {
+  overflow-y: scroll;
+  height: 70%; }
 
 .clientPerson {
+  padding: 5px;
+  border-radius: 20px;
   margin: 30px;
   display: grid;
   font-family: 'Montserrat_Bold';
-  border: 1px solid wheat;
-  height: 50px; }
+  height: 60px; }
   .clientPerson .clientCode {
-    text-align: center;
+    margin: auto;
+    width: 100%;
     grid-column: 1;
     font-size: 3vh;
     background-color: var(--body-color);
     font-family: 'Montserrat_Bold';
     color: var(--primaryc-color);
-    border-radius: 80px; }
+    border-radius: 80px;
+    border: 1px solid purple; }
   .clientPerson .clientDescription {
     font-size: 1vw;
     margin: auto;
     color: var(--sidebar-color); }
+  .clientPerson .status {
+    font-size: 1vw;
+    margin: auto;
+    color: greenyellow; }
   .clientPerson .clientPrice {
+    margin: auto;
+    width: 100%;
+    text-align: center;
     font-size: 3vh;
-    grid-column: 5;
+    grid-column: 6;
     border-radius: 80px;
     font-family: 'Montserrat_Bold';
     background-color: var(--body-color);
     color: var(--primaryc-color); }
+
+.clientPerson:hover {
+  background-color: var(--body-color);
+  transition: var(--tran-03); }
+  .clientPerson:hover .clientDescription {
+    color: var(--primaryc-color); }
+  .clientPerson:hover .clientCode {
+    background-color: var(--primaryc-color);
+    color: var(--body-color); }
+  .clientPerson:hover .clientPrice {
+    background-color: var(--primaryc-color);
+    color: var(--body-color); }
+
+.buttonsDiv {
+  display: grid;
+  height: 10%;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .buttonsDiv #newOrder {
+    margin: 10px;
+    border: 0px;
+    border-radius: 20px;
+    grid-column: 2;
+    height: 100%;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-size: 2vh;
+    transition: var(--tran-03); }
+  .buttonsDiv #newOrder:hover {
+    font-size: 2.5vh;
+    transition: var(--tran-03);
+    background-color: var(--shador-color);
+    color: var(--sidebar-color); }
+  .buttonsDiv .qtdOrders {
+    margin: 10px;
+    grid-column: 1;
+    height: 100%;
+    font-size: 2vw;
+    color: var(--sidebar-color); }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: var(--body-color);
+  border-radius: 10px; }

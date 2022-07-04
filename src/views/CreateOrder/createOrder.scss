@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url("/src/fonts/Montserrat-Medium.ttf"); }
+    src: url("Montserrat-Medium.ttf"); }
   
   @font-face {
     font-family: 'Montserrat_Bold';
-    src: url("/src/fonts/Montserrat-Bold.ttf"); }
+    src: url("Montserrat-Bold.ttf"); }
 
 
 * {
@@ -233,7 +233,7 @@ body.dark .switch::before {
 .main_div {   
   border: 1px solid blue;
   border-radius: 30px;
-  height: 30rem;
+  height: 80%;
   background-color: var(--text-color); 
   text-align: center;
   width: 70%;
@@ -293,28 +293,27 @@ body.dark .switch::before {
   transition: var(--tran-03); }
   
 .dateDiv{
-  border: 1px solid greenyellow;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
-  height: max-content;
-  margin: 30px;
+  height: 10%;
+  margin: 10px;
 }
-.titleName {
-  border: 1px solid #fff;
+.titleName {  
   font-size: 2vw;
   color: var(--primary-color-light);
 }
 
 .dateChosser{
   font-family: 'Montserrat_Bold';
+  font-size: 1vw;
   text-align: center;
   border: 0px;  
   width: 100%;
   border-radius: 20px;
   text-decoration: none;
   background: var(--body-color);
-  color: var(--sidebar-color);
+  color: var(--text-color);
 }
 
 .clientName{
@@ -328,47 +327,115 @@ body.dark .switch::before {
   text-decoration: none;
 }
 
-.clientList {
-  overflow: scroll; 
-
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--body-color); 
-    border-radius: 10px;
-  }
-
+.clientsList {      
+  overflow-y: scroll;
+  height: 70%;
 }
 
 .clientPerson{
+  padding: 5px;
+  border-radius: 20px;
   margin: 30px;
   display: grid;  
-  font-family: 'Montserrat_Bold';
-  border: 1px solid wheat;
-  height: 50px;
+  font-family: 'Montserrat_Bold';  
+  height: 60px;  
 
-
-  .clientCode{          
-    text-align: center;
+  .clientCode{            
+    margin: auto;  
+    width: 100%;
     grid-column: 1;    
     font-size: 3vh;
     background-color: var(--body-color);
     font-family: 'Montserrat_Bold';
     color: var(--primaryc-color);
-    border-radius: 80px;    
+    border-radius: 80px;   
+    border: 1px solid purple; 
   }
+
   .clientDescription { 
     font-size: 1vw;
     margin: auto;       
     color: var(--sidebar-color);    
   }
-  .clientPrice{        
+
+  .status{ 
+    font-size: 1vw;
+    margin: auto;       
+    color: greenyellow;
+  }
+
+  .clientPrice{      
+    margin: auto;
+    width: 100%; 
+    text-align: center;    
     font-size: 3vh;
-    grid-column: 5;
+    grid-column: 6;
     border-radius: 80px;
     font-family: 'Montserrat_Bold';
     background-color: var(--body-color);
     color: var(--primaryc-color);
+  }  
+}
+
+.clientPerson:hover {
+  background-color: var(--body-color);
+  transition: var(--tran-03);
+
+  .clientDescription {
+    color: var(--primaryc-color);
   }
+  .clientCode {
+    background-color: var(--primaryc-color);
+    color: var(--body-color);
+  }
+  .clientPrice {    
+    background-color: var(--primaryc-color);
+    color: var(--body-color);
+  }
+}
+
+.buttonsDiv {
+  display: grid;
+  height: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  #newOrder{
+    margin: auto;
+    margin: 10px;    
+    border: 0px;
+    border-radius: 20px;
+    grid-column: 2;
+    height: 100%;    
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-size: 2vh;
+    transition: var(--tran-03);
+  }
+
+  #newOrder:hover {
+    font-size: 2.5vh;
+    transition: var(--tran-03);
+    background-color: var(--shador-color);
+    color: var(--sidebar-color);
+  }
+
+  .qtdOrders{    
+    margin: 10px;        
+    grid-column: 1;    
+    height: 100%;
+    font-size: 2vw;
+    color: var(--sidebar-color);
+  }
+   
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--body-color); 
+  border-radius: 10px;
 }
