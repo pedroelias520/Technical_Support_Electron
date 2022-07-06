@@ -228,13 +228,13 @@ body.dark .switch::before {
 .main_div {
   border: 1px solid blue;
   border-radius: 30px;
-  height: 80%;
+  height: 90%;
   background-color: var(--text-color);
   text-align: center;
-  width: 70%;
+  width: 80%;
   margin: auto;
   position: fixed;
-  left: 55%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
 
@@ -286,114 +286,92 @@ body.dark .switch::before {
   color: white;
   transition: var(--tran-03); }
 
-.dateDiv {
+.dataDiv {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
-  height: 10%;
-  margin: 10px; }
+  height: 30%;
+  margin: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white; }
 
-.titleName {
-  font-size: 2vw;
-  color: var(--primary-color-light); }
+.imgPreview {
+  grid-column: 1;
+  grid-row: 1/4;
+  width: 22vw;
+  height: 22vh;
+  background-color: var(--body-color);
+  border-radius: 10px;
+  text-align: center; }
 
-.dateChosser {
+.gearInfo {
+  text-align: start; }
+
+.nameGear {
+  grid-column: 2;
+  grid-row: 1;
   font-family: 'Montserrat_Bold';
+  color: var(--sidebar-color); }
+
+.serviceAdd {
+  text-align: start;
   font-size: 1vw;
-  text-align: center;
-  border: 0px;
-  width: 100%;
-  border-radius: 20px;
-  text-decoration: none;
-  background: var(--body-color);
-  color: var(--text-color); }
+  color: var(--sidebar-color);
+  grid-column: 2;
+  grid-row: 3; }
 
-#dateStart {
-  grid-column: 2; }
-
-#hourStart {
-  grid-column: 3; }
-
-#dateEnd {
-  grid-row: 2;
-  grid-column: 2; }
-
-#hourEnd {
-  grid-row: 2;
-  grid-column: 3; }
-
-.hourChosser {
+.serviceAdd input {
+  margin-left: 10px;
   font-family: 'Montserrat_Bold';
-  font-size: 1vw;
+  width: 10vw;
+  height: 2vh;
+  border-radius: 40px;
+  border: 1px solid var(--sidebar-color);
   text-align: center;
-  border: 0px;
-  width: 100%;
-  border-radius: 20px;
-  text-decoration: none;
-  background: var(--body-color);
-  color: var(--text-color); }
+  background-color: transparent;
+  color: var(--sidebar-color);
+  height: 100%; }
 
-.clientName {
-  text-align: center;
-  font-family: "Montserrat";
-  color: var(--text-color);
-  border: 0px;
-  grid-column: 2/5;
-  border-radius: 20px;
-  background-color: var(--sidebar-color);
-  text-decoration: none; }
+.markGear {
+  font-family: 'Montserrat';
+  grid-column: 2;
+  grid-row: 2;
+  color: var(--sidebar-color); }
 
-.clientsList {
+.serviceInfo {
+  border: 1px solid goldenrod;
   overflow-y: scroll;
   height: 70%; }
 
-.clientPerson {
-  padding: 5px;
-  border-radius: 20px;
-  margin: 30px;
-  display: grid;
-  font-family: 'Montserrat_Bold';
-  height: 60px; }
-  .clientPerson .clientCode {
-    margin: auto;
-    width: 100%;
-    grid-column: 1;
-    font-size: 3vh;
-    background-color: var(--body-color);
-    font-family: 'Montserrat_Bold';
-    color: var(--primaryc-color);
-    border-radius: 80px;
-    border: 1px solid purple; }
-  .clientPerson .clientDescription {
-    font-size: 1vw;
-    margin: auto;
-    color: var(--sidebar-color); }
-  .clientPerson .status {
-    font-size: 1vw;
-    margin: auto;
-    color: greenyellow; }
-  .clientPerson .clientPrice {
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 3vh;
-    grid-column: 6;
-    border-radius: 80px;
-    font-family: 'Montserrat_Bold';
-    background-color: var(--body-color);
-    color: var(--primaryc-color); }
+.order {
+  display: grid; }
 
-.clientPerson:hover {
+.reportOrder {
+  font-family: 'Montserrat';
+  color: var(--text-color);
   background-color: var(--body-color);
-  transition: var(--tran-03); }
-  .clientPerson:hover .clientDescription {
-    color: var(--primaryc-color); }
-  .clientPerson:hover .clientCode {
-    background-color: var(--primaryc-color);
-    color: var(--body-color); }
-  .clientPerson:hover .clientPrice {
-    background-color: var(--primaryc-color);
-    color: var(--body-color); }
+  transition: var(--tran-03);
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px;
+  height: 100%; }
+
+.reportOrder:hover {
+  transition: var(--tran-03);
+  background-color: var(--shador-color);
+  color: var(--sidebar-color); }
+
+.report {
+  grid-column: 1;
+  grid-row: 1; }
+
+.manufacter {
+  grid-column: 2;
+  grid-row: 1; }
+
+.services {
+  grid-column: 3;
+  grid-row: 1; }
 
 .buttonsDiv {
   display: grid;
