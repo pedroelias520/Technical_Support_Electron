@@ -339,6 +339,7 @@ body.dark .switch::before {
   color: var(--sidebar-color); }
 
 .serviceInfo {
+  border: 1px solid goldenrod;
   overflow-y: scroll;
   height: max-content; }
 
@@ -425,10 +426,11 @@ body.dark .switch::before {
 
 .relateDiv {
   margin: 10px;
+  border: 1px solid greenyellow;
   text-align: start; }
   .relateDiv .titleInput {
     color: var(--sidebar-color);
-    font-size: 1.0vw;
+    font-size: 1.5vw;
     margin-left: 1vw; }
   .relateDiv .textInput {
     font-family: 'Montserrat';
@@ -459,8 +461,7 @@ body.dark .switch::before {
     display: grid;
     margin: 10px;
     border: 1px solid black;
-    border-radius: 20px;
-    transition: var(--tran-03); }
+    border-radius: 20px; }
     .services .serviceItem .serviceCode {
       grid-column: 1;
       background-color: var(--text-color);
@@ -476,16 +477,6 @@ body.dark .switch::before {
       background-color: var(--text-color);
       border-radius: 10px;
       color: var(--sidebar-color); }
-  .services .serviceItem:hover {
-    transition: var(--tran-03);
-    background-color: var(--primaryc-color);
-    color: var(--sidebar-color); }
-    .services .serviceItem:hover .serviceCode {
-      background-color: var(--sidebar-color);
-      color: var(--text-color); }
-    .services .serviceItem:hover .servicePrice {
-      background-color: var(--sidebar-color);
-      color: var(--text-color); }
   .services h2 {
     margin: 10px; }
 
@@ -518,16 +509,6 @@ body.dark .switch::before {
       background-color: var(--text-color);
       border-radius: 10px;
       color: var(--sidebar-color); }
-  .products .productItem:hover {
-    transition: var(--tran-03);
-    background-color: var(--primaryc-color);
-    color: var(--sidebar-color); }
-    .products .productItem:hover .productCode {
-      background-color: var(--sidebar-color);
-      color: var(--text-color); }
-    .products .productItem:hover .productPrice {
-      background-color: var(--sidebar-color);
-      color: var(--text-color); }
   .products h2 {
     margin: 10px; }
 

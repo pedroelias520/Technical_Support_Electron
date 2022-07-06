@@ -43,7 +43,7 @@
                                 <i class='bx bx-data icon open'></i>
                                 <span class="text nav-text">Em breve</span>
                             </a>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
                 <div class="bottom-content">
@@ -68,27 +68,63 @@
                 </div>
             </div>
         </nav>
-        <div class="main_div"> 
+        <div class="main_div">
             <div class="dataDiv">
-                <img class="imgPreview" src="/src/imgs/AlphaTech_transparent.png">                
+                <img class="imgPreview" src="/src/imgs/AlphaTech_transparent.png">
                 <h1 class="gearInfo nameGear">POSITIVO SIM +</h1>
                 <h2 class="gearInfo markGear">POSITIVO</h2>
-                <div class="serviceAdd">Use um código para adicionar um serviço <input type="number" class="serviceSelection"></div>
-            </div> 
+                <div class="serviceAdd">Use um código para adicionar um serviço <input type="number"
+                        class="serviceSelection"></div>
+            </div>
             <div class="serviceInfo">
                 <div class="order">
-                    <div class="reportOrder report"><span>Laudo/Relato</span></div>
-                    <div class="reportOrder manufacter"><span>Mão de obra</span></div>
-                    <div class="reportOrder services"><span>Serviços</span></div>                    
-                </div>                
-            </div>   
-            <div class="buttonsDiv">
-                <h2 class="qtdOrders">URGENTE!</h2>     
-                <input id="newOrder" value="Entregar"></input>                                              
+                    <div class="relateDiv labor">
+                        <h1 class="titleInput">Relato do cliente</h1>
+                        <input type="text" class="textInput relate">
+                    </div>
+
+                    <div class="relateDiv report">
+                        <h1 class="titleInput">Laudo técnico</h1>
+                        <input type="text" class="textInput relate">
+                    </div>
+                    <div class="services">
+                        <H2>Serviços realizados</H2>
+                        <div class="serviceList">
+                            <div class="serviceItem">
+                                <div class="serviceCode">#3</div>
+                                <h4 class="serviceDescription">Limpeza</h4>                                
+                                <div class="servicePrice">R$ 3</div>
+                            </div>
+                            <div class="serviceItem">
+                                <div class="serviceCode">#30</div>
+                                <h4 class="serviceDescription">Reparo </h4>                                
+                                <div class="servicePrice">R$ 120</div>
+                            </div>
+                            <div class="serviceItem">
+                                <div class="serviceCode">#120</div>
+                                <h4 class="serviceDescription">Reparo</h4>                                
+                                <div class="servicePrice">R$ 150</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <H2>Produtos usados</H2>
+                        <div class="productList">
+                            <div class="productItem">
+                                <div class="productCode">#3</div>
+                                <h4 class="productDescription">Limpa Contato</h4>                                
+                                <div class="productPrice">R$ 26</div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+            <div class="buttonsDiv">
+                <input id="printOrder" value="Imprimir"></input>
+                <input id="newOrder" value="Entregar"></input>
+            </div>
         </div>
-    </div>        
+    </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
