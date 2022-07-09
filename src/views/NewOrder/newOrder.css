@@ -45,7 +45,7 @@ body.dark {
   --primary-color-light: #444;
   --toggle-color: #FFF;
   --text-color: #CCC;
-  --shador-color: #290054;
+  --shador-color: #FFDD00;
   --filter: 100%; }
 
 .sidebar.close {
@@ -374,44 +374,64 @@ body.dark .switch::before {
   margin-left: 10px;
   margin-right: 10px; }
   .buttonsDiv #newOrder {
-    text-align: center;
-    border: 0px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
     margin: 10px;
     border-radius: 20px;
+    border: 1px solid black;
     grid-column: 2;
-    height: 100%;
-    font-size: 2vh;
+    grid-row: 1;
+    height: 5vw;
     background-color: var(--body-color);
     color: var(--text-color);
-    transition: var(--tran-03); }
+    transition: var(--tran-03);
+    font-size: 2vw; }
+    .buttonsDiv #newOrder span {
+      padding-left: 10px;
+      margin: auto;
+      grid-row: 1;
+      grid-column: 1; }
     .buttonsDiv #newOrder i {
-      border: 1px solid purple;
-      margin: auto; }
+      padding-left: 10px;
+      margin: auto;
+      grid-row: 1;
+      grid-column: 2; }
   .buttonsDiv #printOrder {
-    text-align: center;
-    border: 0px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
     border-radius: 20px;
+    border: 1px solid black;
     margin: 10px;
     grid-column: 1;
-    height: 100%;
-    font-size: 2vh;
+    grid-row: 1;
+    height: 5vw;
     background-color: var(--body-color);
     color: var(--text-color);
-    transition: var(--tran-03); }
+    transition: var(--tran-03);
+    font-size: 2vw; }
+    .buttonsDiv #printOrder span {
+      padding-left: 10px;
+      margin: auto;
+      grid-row: 1;
+      grid-column: 2; }
     .buttonsDiv #printOrder i {
-      border: 1px solid purple;
-      margin: auto; }
+      padding-left: 10px;
+      margin: auto;
+      grid-row: 1;
+      grid-column: 3; }
   .buttonsDiv #printOrder:hover {
     transition: var(--tran-03);
     font-family: 'Montserrat_Bold';
-    font-size: 1.5vh;
+    font-size: calc(2vw - 50%);
     transition: var(--tran-03);
     background-color: var(--shador-color);
     color: var(--sidebar-color); }
   .buttonsDiv #newOrder:hover {
     transition: var(--tran-03);
     font-family: 'Montserrat_Bold';
-    font-size: 1.5vh;
+    font-size: calc(2vw - 50%);
     transition: var(--tran-03);
     background-color: var(--shador-color);
     color: var(--sidebar-color); }
@@ -467,10 +487,11 @@ body.dark .switch::before {
       border-radius: 10px;
       color: var(--sidebar-color); }
     .services .serviceItem .serviceDescription {
+      text-align: center;
       grid-column: 2;
       margin: auto;
-      font-size: 100%;
-      width: 100%; }
+      font-size: 12px;
+      width: 10vw; }
     .services .serviceItem .servicePrice {
       grid-column: 3;
       background-color: var(--text-color);
@@ -511,8 +532,8 @@ body.dark .switch::before {
     .products .productItem .productDescription {
       grid-column: 2;
       margin: auto;
-      font-size: 100%;
-      width: 100%; }
+      font-size: 1vw;
+      width: 10vw; }
     .products .productItem .productPrice {
       grid-column: 3;
       background-color: var(--text-color);
@@ -530,6 +551,103 @@ body.dark .switch::before {
       color: var(--text-color); }
   .products h2 {
     margin: 10px; }
+
+.dateForm {
+  grid-column: 1/4;
+  margin-top: 20px; }
+
+.clientInfo {
+  display: grid;
+  margin-bottom: 20px; }
+  .clientInfo h1 {
+    color: var(--sidebar-color); }
+  .clientInfo .client {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    grid-column: 1;
+    grid-row: 1; }
+  .clientInfo .andress {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    grid-column: 1;
+    grid-row: 2; }
+  .clientInfo .clientInput {
+    padding: 10px;
+    text-align: center;
+    color: var(--sidebar-color);
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--sidebar-color);
+    border-radius: 20px; }
+  .clientInfo .nameClient {
+    grid-column: 2/6;
+    grid-row: 1; }
+  .clientInfo .countryInput {
+    grid-column: 2;
+    grid-row: 2; }
+  .clientInfo .stateInput {
+    grid-column: 3;
+    grid-row: 2; }
+  .clientInfo .cityInput {
+    grid-column: 4;
+    grid-row: 2; }
+  .clientInfo .houseNumberInput {
+    grid-column: 5;
+    grid-row: 2; }
+
+.giveDate {
+  display: grid;
+  padding: 10px; }
+
+.hourTitle {
+  color: var(--sidebar-color);
+  width: calc(100% - 50px);
+  height: 100%;
+  background-color: transparent;
+  grid-column: 1;
+  font-size: 1vw;
+  margin: auto; }
+  .hourTitle .give {
+    grid-row: 1; }
+  .hourTitle .ready {
+    grid-row: 1; }
+  .hourTitle .send {
+    grid-row: 1; }
+
+.label,
+.clientInput {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.dateChosser {
+  text-align: center;
+  font-family: 'Montserrat_Bold';
+  background-color: var(--body-color);
+  font-size: 1vw;
+  border-radius: 20px;
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  grid-column: 2; }
+
+.timeChosser {
+  text-align: center;
+  font-family: 'Montserrat_Bold';
+  background-color: var(--body-color);
+  font-size: 1vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  grid-column: 3; }
 
 ::-webkit-scrollbar {
   width: 10px; }

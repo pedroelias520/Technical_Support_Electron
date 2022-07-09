@@ -92,17 +92,17 @@
                         <div class="serviceList">
                             <div class="serviceItem">
                                 <div class="serviceCode">#3</div>
-                                <h4 class="serviceDescription">Limpeza</h4>                                
+                                <h4 class="serviceDescription">Limpeza</h4>
                                 <div class="servicePrice">R$ 3</div>
                             </div>
                             <div class="serviceItem">
                                 <div class="serviceCode">#30</div>
-                                <h4 class="serviceDescription">Reparo </h4>                                
+                                <h4 class="serviceDescription">Reparo </h4>
                                 <div class="servicePrice">R$ 120</div>
                             </div>
                             <div class="serviceItem">
                                 <div class="serviceCode">#120</div>
-                                <h4 class="serviceDescription">Reparo</h4>                                
+                                <h4 class="serviceDescription">Reparo Eletrônico</h4>
                                 <div class="servicePrice">R$ 150</div>
                             </div>
                         </div>
@@ -112,16 +112,54 @@
                         <div class="productList">
                             <div class="productItem">
                                 <div class="productCode">#3</div>
-                                <h4 class="productDescription">Limpa Contato</h4>                                
+                                <h4 class="productDescription">Limpa Contato</h4>
                                 <div class="productPrice">R$ 26</div>
-                            </div>                            
+                            </div>
+                            <div class="productItem">
+                                <div class="productCode">#3</div>
+                                <h4 class="productDescription">Limpa Contato</h4>
+                                <div class="productPrice">R$ 26</div>
+                            </div>
+                            <div class="productItem">
+                                <div class="productCode">#3</div>
+                                <h4 class="productDescription">Limpa Contato</h4>
+                                <div class="productPrice">R$ 26</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dateForm">
+
+                        <div class="clientInfo">
+                            <h1 class="label client">Cliente</h1>
+                            <input class="clientInput nameClient" type="text">
+
+                            <h1 class="label andress">Endereço</h1>
+                            <input type="text" class="clientInput countryInput" placeholder="Pais">
+                            <input type="text" class="clientInput stateInput" placeholder="Estado">
+                            <input type="text" class="clientInput cityInput" placeholder="Cidade">
+                            <input type="text" class="clientInput houseNumberInput" placeholder="Numero">
+                        </div>
+                        <div class="giveDate">
+                            <h1 class="hourTitle give">Recebido</h1>
+                            <input type="date" class="dateChosser" id="giveDate">
+                            <input type="time" class="timeChosser" id="giveTime">
+                        </div>
+                        <div class="giveDate">
+                            <h1 class="hourTitle ready">Pronto</h1>
+                            <input type="date" class="dateChosser" id="readyDate">
+                            <input type="time" class="timeChosser" id="readyTime">
+                        </div>
+                        <div class="giveDate">
+                            <h1 class="hourTitle send">Entregue</h1>
+                            <input type="date" class="dateChosser" id="doneDate">
+                            <input type="time" class="timeChosser" id="doneDate">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="buttonsDiv">
-                <input id="printOrder" value="Imprimir"></input>
-                <input id="newOrder" value="Entregar"></input>
+                <div id="printOrder"><span>Imprimir</span><i class='bx bx-printer'></i></div>
+                <div id="newOrder"><span>Entregar</span><i class='bx bxs-send'></i></div>
             </div>
         </div>
     </div>

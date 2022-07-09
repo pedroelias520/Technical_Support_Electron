@@ -54,7 +54,7 @@ body.dark {
   --primary-color-light: #444;
   --toggle-color: #FFF;
   --text-color: #CCC;
-  --shador-color: #290054;
+  --shador-color: #FFDD00;
   --filter: 100%;
   ;
 }
@@ -399,7 +399,7 @@ body.dark .switch::before {
 
 
 
-.serviceInfo {  
+.serviceInfo {
   overflow-y: scroll;
   height: max-content;
 }
@@ -446,45 +446,69 @@ body.dark .switch::before {
   margin-right: 10px;
 
   #newOrder {
-    text-align: center;
-    border: 0px;
+    display: grid;
+    justify-content: center;
+    align-content: center;    
     margin: 10px;
     border-radius: 20px;
+    border: 1px solid black;
     grid-column: 2;
-    height: 100%;
-    font-size: 2vh;
+    grid-row: 1;
+    height: 5vw;    
     background-color: var(--body-color);
     color: var(--text-color);
     transition: var(--tran-03);
+    font-size: 2vw;    
 
-    i {
-      border: 1px solid purple;
-      margin: auto;
+    span {            
+      padding-left: 10px;
+      margin: auto;      
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    i {      
+      padding-left: 10px;
+      margin: auto;      
+      grid-row: 1;
+      grid-column: 2;
     }
   }
 
   #printOrder {
-    text-align: center;
-    border: 0px;
+    display: grid;
+    justify-content: center;
+    align-content: center;    
     border-radius: 20px;
+    border: 1px solid black;
     margin: 10px;
     grid-column: 1;
-    height: 100%;
-    font-size: 2vh;
+    grid-row: 1;
+    height: 5vw;    
     background-color: var(--body-color);
     color: var(--text-color);
     transition: var(--tran-03);
+    font-size: 2vw;    
 
-    i {
-      border: 1px solid purple;
-      margin: auto;
+    span {      
+      padding-left: 10px;
+      margin: auto;      
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    i {      
+      padding-left: 10px;
+      margin: auto;      
+      grid-row: 1;
+      grid-column: 3;
     }
   }
 
   #printOrder:hover {
     transition: var(--tran-03);
     font-family: 'Montserrat_Bold';
-    font-size: 1.5vh;
+    font-size: calc(2vw - 50%);
     transition: var(--tran-03);
     background-color: var(--shador-color);
     color: var(--sidebar-color);
@@ -493,7 +517,7 @@ body.dark .switch::before {
   #newOrder:hover {
     transition: var(--tran-03);
     font-family: 'Montserrat_Bold';
-    font-size: 1.5vh;
+    font-size: calc(2vw - 50%);
     transition: var(--tran-03);
     background-color: var(--shador-color);
     color: var(--sidebar-color);
@@ -511,7 +535,7 @@ body.dark .switch::before {
 }
 
 .relateDiv {
-  margin: 10px;  
+  margin: 10px;
   text-align: start;
 
   .titleInput {
@@ -566,10 +590,11 @@ body.dark .switch::before {
     }
 
     .serviceDescription {
+      text-align: center;
       grid-column: 2;
       margin: auto;
-      font-size: 100%;
-      width: 100%;
+      font-size: 12px;
+      width: 10vw;
     }
 
     .servicePrice {
@@ -585,12 +610,13 @@ body.dark .switch::before {
     background-color: var(--primaryc-color);
     color: var(--sidebar-color);
 
-    .serviceCode {     
-      background-color: var(--sidebar-color);     
+    .serviceCode {
+      background-color: var(--sidebar-color);
       color: var(--text-color);
     }
-    .servicePrice {     
-      background-color: var(--sidebar-color);     
+
+    .servicePrice {
+      background-color: var(--sidebar-color);
       color: var(--text-color);
     }
   }
@@ -626,8 +652,8 @@ body.dark .switch::before {
     .productDescription {
       grid-column: 2;
       margin: auto;
-      font-size: 100%;
-      width: 100%;
+      font-size: 1vw;
+      width: 10vw;
     }
 
     .productPrice {
@@ -643,12 +669,13 @@ body.dark .switch::before {
     background-color: var(--primaryc-color);
     color: var(--sidebar-color);
 
-    .productCode {     
-      background-color: var(--sidebar-color);     
+    .productCode {
+      background-color: var(--sidebar-color);
       color: var(--text-color);
     }
-    .productPrice {     
-      background-color: var(--sidebar-color);     
+
+    .productPrice {
+      background-color: var(--sidebar-color);
       color: var(--text-color);
     }
   }
@@ -658,6 +685,138 @@ body.dark .switch::before {
   }
 }
 
+.dateForm {
+  grid-column: 1/4;
+  margin-top: 20px;
+}
+
+.clientInfo {
+  display: grid;
+  margin-bottom: 20px;
+
+  h1 {
+    color: var(--sidebar-color);
+  }
+
+  .client {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .andress {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .clientInput {    
+    padding: 10px;
+    text-align: center;
+    color: var(--sidebar-color);
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--sidebar-color);
+    border-radius: 20px;
+  }
+
+  .nameClient {    
+    grid-column: 2/6;
+    grid-row: 1;
+  }
+
+  .countryInput {    
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .stateInput {    
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .cityInput {    
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .houseNumberInput {    
+    grid-column: 5;
+    grid-row: 2;
+  }
+
+
+
+}
+
+.giveDate {
+  display: grid;
+  padding: 10px;
+}
+
+
+.hourTitle {
+  color: var(--sidebar-color);
+  width: calc(100% - 50px);
+  height: 100%;
+  background-color: transparent;
+  grid-column: 1;
+  font-size: 1vw;
+  margin: auto;
+
+  .give {
+    grid-row: 1;
+  }
+
+  .ready {
+    grid-row: 1;
+  }
+
+  .send {
+    grid-row: 1;
+  }
+}
+
+.label,
+.clientInput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dateChosser {
+  text-align: center;
+  font-family: 'Montserrat_Bold';
+  background-color: var(--body-color);
+  font-size: 1vw;
+  border-radius: 20px;
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  grid-column: 2;
+}
+
+.timeChosser {
+  text-align: center;
+  font-family: 'Montserrat_Bold';
+  background-color: var(--body-color);
+  font-size: 1vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  grid-column: 3;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -665,29 +824,4 @@ body.dark .switch::before {
 ::-webkit-scrollbar-thumb {
   background: var(--body-color);
   border-radius: 10px;
-}
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 ==$u2 and $u1 ==$u3 and $u1 ==$u4 {
-    & {
-      font-size: $min-font-size;
-
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
 }
