@@ -1,94 +1,94 @@
-app.post('/create_user', async (req, res) =>{
-    try{        
-        console.log(req.body);
-        const id = req.body.id;
-        const   userJson = {
-            id: req.body.id,
-            name: req.body.name,
-            birthDay: req.body.birthDay,
-            level: req.body.level,
+
+let pedido = function name() {};
+
+pedido.prototype.addUser = function addUser(id, name, birthDay, level) {
+    try {
+        const userJson = {
+            id: id,
+            name: name,
+            birthDay: birthDay,
+            level: level,
         }
         const response = await db.collection("users").add(userJson);
-        res.send(response)
-    }catch(error){
-        res.send(error)
+        console.log(response)
+    } catch (error) {
     }
-})
+}
 
-app.post('/create_product', async (req, res) =>{
-    try{        
-        console.log(req.body);
-        const id = req.body.id;
-        const   userJson = {
-            id: req.body.id,
-            name: req.body.name,
-            price: req.body.price,
-            manufacter: req.body.manufacter,
-            description: req.body.description,
-            qtd: req.body.qtd,
+pedido.prototype.addProduct = function addProduct(id, name, price, manufacter, description, qtd) {
+    try {
+        const productJson = {
+            id: id,
+            name: name,
+            price: price,
+            manufacter: manufacter,
+            desscription: description,
+            qtd: qtd
         }
-        const response = await db.collection("products").add(userJson);
-        res.send(response)
-    }catch(error){
-        res.send(error)
+        const response = await db.collection("users").add(productJson);
+        console.log(response)
+    } catch (error) {
     }
-})
+}
 
-app.post('/create_services', async (req, res) =>{
-    try{        
-        console.log(req.body);
-        const id = req.body.id;
-        const   userJson = {
-            id: req.body.id,
-            price: req.body.price,
-            name: req.body.name,
-            type: req.body.type,            
+pedido.prototype.addServices = function addServices(id, price, name, type) {
+    try {
+        const serviceJson = {
+            id: id,
+            price: price,
+            name: name,
+            type: type,            
         }
-        const response = await db.collection("services").add(userJson);
-        res.send(response)
-    }catch(error){
-        res.send(error)
+        const response = await db.collection("services").add(serviceJson);
+        console.log(response)
+    } catch (error) {
     }
-})
+}
 
-app.get('/read/:id',async (req, res)=>{
-    try{
-        const userRef = db.collection("users").doc(req.params.id);
+
+pedido.prototype.getUser = function getUser(id) {
+    try {
+        const userRef = db.collection("users").doc(id);
         const response = await userRef.get();
-        res.send(response.data());
-    }catch(error){
+        console.log(response)
+    } catch (error) {
         res.send(error)
     }
-})
+}
 
-app.get('/read',async (req, res)=>{
-    try{
+
+pedido.prototype.getAllUser = function getAllUser(id) {
+    try {
         const userRef = db.collection("users");
         const response = await userRef.get();
-        res.send(response.data());
-    }catch(error){
+        console.log(response)
+    } catch (error) {
         res.send(error)
     }
-})
+}
 
-app.post('/update', async(req, res)=>{
-    try{
-        const id=req.body.id;
-        const newFirstName = "hello world";
-        const userRef = await db.collection("users").doc(id).update({
-            firstName: newFirstName
-        });
-        res.send(userRef);
-    }catch(error){
-        res.send(error)
+pedido.prototype.updateUser = function updateUser(id, name, birthDay, level) {
+    try {
+        const userJson = {
+            id: id,
+            name: name,
+            birthDay: birthDay,
+            level: level,
+        }
+        const response = await db.collection("users").doc(id).update(userJson);
+        console.log(response)
+    } catch (error) {
     }
-})
+}
 
-app.delete('/delete/:id', async(req, res)=>{
-    try{
-        const userRef = await db.collection("users").doc(req.params.id).delete()
-        res.send(userRef);
-    }catch(error){
+pedido.prototype.deleteUser = function deleteUser(id) {
+    try {
+        const userRef = await db.collection("users").doc(id).delete()
+        console.log(response)
+    } catch (error) {
         res.send(error)
     }
-})
+}
+
+
+module.exports = pedido
