@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "boxicons": "^2.1.2",
+    "electron-router": "^0.5.1",
     "express": "^4.18.1",
     "firebase-admin": "^11.0.0"
   }
